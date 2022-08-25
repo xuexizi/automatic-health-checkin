@@ -50,11 +50,11 @@ def daka():
         # 找到登录框，输入账号密码
         driver.find_element(By.XPATH, '//*[@id="username"]').send_keys(config["username"])
         driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(config["password"])
-        time.sleep(random.randint(2, 5))
+        time.sleep(random.randint(2, 4))
 
         # 模拟点击登录
         driver.find_element(By.XPATH, '//*[@id="main"]/div/div/div[5]/div/input[1]').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
         print("登录成功")
 
         # 跳转
@@ -71,47 +71,47 @@ def daka():
         pag = driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[2]/div[2]/div/div/input')
         driver.execute_script("arguments[0].removeAttribute('readonly')", pag)
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[2]/div[2]/div/div/input').send_keys(config_today["location"])
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 3.今日是否在校？
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[3]/div[2]/div/div/li[1]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 4.近2天内是否曾经离杭？
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[4]/div[2]/div/div/li[2]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 5.近7天是否有国内高中低风险地区旅居史?
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[5]/div[2]/div/div/li[2]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 6.近7天是否有（或被告知有）与疑似、确诊人员或密切接触者的接触史?
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[6]/div[2]/div/div/li[2]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 7.现是否处于健康管理（管控）期? 如是，请暂缓来校。
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[7]/div[2]/div/div/li[1]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 8.现身体状况，是否存在发热体温、寒战、咳嗽、胸闷以及呼吸困难等症状?
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[8]/div[2]/div/div/li[2]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 9.同住家属（人员）是否有上述与疫情相关的情况？
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[9]/div[2]/div/div/li[2]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 10.当前疫苗接种情况?-------------------
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[10]/div[2]/div/div/li[4]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 11.本人或家庭成员(包括其他亲密接触人员)是否有近10日入境或未来7天内拟入境的情况?
         driver.find_element(By.XPATH, '//*[@id="question-form"]/ul/li[11]/div[2]/div/div/li[2]/label/div[2]/div').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 模拟点击提交
         driver.find_element(By.PARTIAL_LINK_TEXT, '提交').click()
-        time.sleep(random.randint(1, 3))
+        time.sleep(random.randint(2, 4))
 
         # 验证打卡成功
         if is_visible(driver, '//*[@class="modal-buttons "]/span'):
