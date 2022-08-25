@@ -58,8 +58,14 @@ def daka():
         print("登录成功")
 
         # 跳转
+        # 获取当前浏览器的所有窗口句柄
         windows = driver.window_handles
+        # 切换到最新打开的窗口
         driver.switch_to.window(windows[-1])
+        # 切换到倒数第二个打开的窗口
+        # driver.switch_to.window(windows[-2])
+        # 切换到最开始打开的窗口
+        # driver.switch_to.window(windows[0])
 
         # 首先确认表单是否改变
         ret = verific(driver)
