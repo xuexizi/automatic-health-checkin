@@ -1,0 +1,15 @@
+# 学号
+username: xxx
+# 密码
+password: xxx
+# 每日打卡时间，格式 HH:mm，更改之后需重新运行容器
+schedule: 9:00
+# 收件邮箱
+email: xxx
+# 打卡规则
+rules:
+  # 默认规则
+  default:
+    # location 只能填 '省 市 区'
+    location: 浙江省 杭州市 拱墅区
+
